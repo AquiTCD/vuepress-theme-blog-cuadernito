@@ -1,0 +1,57 @@
+:root
+  font-size: $font-size-root
+  +media-query(media-larger)
+    font-size: $font-size-root-pc
+html
+  height: 100%
+body
+  background-color: $bg-color-base
+  color: $font-color-base
+  font-family: $font-family-base
+  font-size: $font-size-base
+  letter-spacing: $letter-spacing-base
+  link-variation: $primary-color-shade false
+  vertical-rhythm: true
+  word-wrap: break-word
+  -moz-osx-font-smoothing: unset
+  -webkit-font-smoothing: subpixel-antialiased
+@media only screen and (-webkit-min-device-pixel-ratio: 2), (min-resolution: 2dppx)
+  body
+    -moz-osx-font-smoothing: grayscal
+    -webkit-font-smoothing: antialiased
+button // reset
+  appearance: none
+  background-color: transparent
+  border: none
+  cursor: pointer
+  font-size: $font-size-base
+  outline: none
+  padding: 0
+img // for missing image
+  height: auto
+  max-width: 100%
+  position: relative
+  text-align: center
+  &:after
+    absolute: top 0 left 0
+    background-color: $grey-tint
+    border: 1px dashed $grey-base
+    color: $grey-shade
+    content: '\f1c5' attr(alt) ' Image not found'
+    font-family: FontAwesome
+    font-size: 1rem
+    height: 100%
+    overflow: hidden
+    width: 100%
+    z-index: 2
+amp-img // follback for amp-img
+  background-color: $grey-tint
+  overflow: hidden
+  p[fallback]
+    border: 1px dashed $grey-base
+    color: $grey-shade
+    font-size: 1rem
+    &:before
+      content: '\f1c5'
+      font-family: FontAwesome
+      margin: auto 0.5em
