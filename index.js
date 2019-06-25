@@ -19,9 +19,9 @@ module.exports = (themeConfig, ctx) => {
         path: '/',
         layout: 'IndexPost',
         itemLayout: 'Post',
-        itemPermalink: '/:year/:month/:day/:slug',
+        itemPermalink: '/:slug',
         pagination: {
-          lengthPerPage: 5,
+          lengthPerPage: 12,
         },
       },
       {
@@ -32,7 +32,7 @@ module.exports = (themeConfig, ctx) => {
         itemLayout: 'Post',
         itemPermalink: '/archive/:year/:month/:day/:slug',
         pagination: {
-          lengthPerPage: 5,
+          lengthPerPage: 12,
         },
       },
     ],
@@ -45,7 +45,7 @@ module.exports = (themeConfig, ctx) => {
         frontmatter: { title: 'Tag' },
         itemlayout: 'Tag',
         pagination: {
-          perPagePosts: 5
+          perPagePosts: 12
         }
       },
     ]

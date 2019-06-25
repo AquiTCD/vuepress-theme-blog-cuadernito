@@ -5,7 +5,7 @@
     Sidebar(:items="sidebarItems" @toggle-sidebar="$emit('toggle-sidebar')")
       slot(name="sidebar-top" slot="top")
       slot(name="sidebar-bottom" slot="bottom")
-    Hero
+    Hero(:should-show-navbar="shouldShowNavbar")
 </template>
 
 <script>

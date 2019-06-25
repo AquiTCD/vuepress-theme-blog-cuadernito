@@ -56,6 +56,13 @@ export function findContainerInVm(ref, vm, def) {
   return container || def;
 }
 
+export function getHash(path) {
+  const match = path.match(hashRE)
+  if (match) {
+    return match[0]
+  }
+}
+
 export function isActive(route, path) {
   const routeHash = route.hash
   const linkHash = getHash(path)
