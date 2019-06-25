@@ -5,6 +5,7 @@
       DropdownLink(v-if="item.type === 'links'" :item="item")
       NavLink(v-else :item="item")
     //- <!-- repo link -->
+    a.feed(href="/rss.xml") RSS feed
     a.repo-link(
       v-if="repoLink"
       :href="repoLink"
@@ -119,12 +120,14 @@ export default {
     position: relative
     &:first-child
       margin-left: 0
-  .repo-link
+  .repo-link,
+  .feed
     margin-left: 1.5rem
 @media (max-width: $MQMobile)
   .nav-links
     .nav-item,
-    .repo-link
+    .repo-link,
+    .feed
       margin-left: 0
 @media (min-width: $MQMobile)
   .nav-links

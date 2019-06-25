@@ -1,5 +1,5 @@
 <template lang="pug">
-  header.hero(:class="{'has-sidebar': $page.type === 'post' }")
+  header.hero(:class="{'has-sidebar': shouldShowNavbar }")
     h1.site_title
       router-link.home-link(:to="$localePath")
         img.site_title--logo(v-if="data.heroImage || $site.themeConfig.logo"
@@ -11,7 +11,7 @@
     .site_tags
       ul.tag_list
         li.tag_list--item(v-for="tag in tags")
-          a.tag_list--link(:href="'/tag/' + tag") {{ tag }}
+          a.tag_list--link(:href="`/tag/${tag}/`") {{ tag }}
     p.site_description
       | {{ data.tagline || $site.description }}
     //- p.action(v-if="data.actionText && data.actionLink")
@@ -23,7 +23,9 @@
 
 export default {
   // components: { NavLink },
-
+  props: {
+    shouldShowNavbar: { default: true },
+  },
   computed: {
     data() {
       return this.$page.frontmatter
