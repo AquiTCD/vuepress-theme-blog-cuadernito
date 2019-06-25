@@ -6,7 +6,7 @@
   )
     Header(:should-show-navbar="shouldShowNavbar" :sidebar-items="sidebarItems" @toggle-sidebar="toggleSidebar")
     .content-wrapper
-      DefaultGlobalLayout
+      DefaultGlobalLayout.l-main
     Footer
 </template>
 
