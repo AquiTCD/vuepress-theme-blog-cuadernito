@@ -35,16 +35,8 @@ body
 .page,
 .hero.has-sidebar
   padding-left: $sidebarWidth
-// .navbar
-// background-color: #fff
-// border-bottom: 1px solid $borderColor
-// box-sizing: border-box
-// height: $navbarHeight
-// left: 0
-// position: fixed
-// right: 0
-// top: 0
-// z-index: 20
+.footer.has-sidebar
+  padding-left: $sidebarWidth + 4px
 .sidebar-mask
   display: none
   height: 100vh
@@ -85,10 +77,11 @@ body
   .theme-container.no-sidebar
     .sidebar
       display: none
-    .page
-      padding-left: 0
+    .page,
     .hero.has-sidebar
       padding-left: 0
+    .footer.has-sidebar
+      padding-left: 32px
 
 @import './mobile.styl'
 @import './wrapper.styl'

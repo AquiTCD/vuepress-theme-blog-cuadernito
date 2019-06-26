@@ -7,7 +7,7 @@
     Header(:should-show-navbar="shouldShowNavbar" :sidebar-items="sidebarItems" @toggle-sidebar="toggleSidebar")
     .content-wrapper
       DefaultGlobalLayout.l-main
-    Footer
+    Footer(:should-show-navbar="shouldShowNavbar")
 </template>
 
 <script>
