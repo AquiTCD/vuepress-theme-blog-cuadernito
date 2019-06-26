@@ -1,4 +1,4 @@
 module.exports = {
-  title: '@vuepress/theme-blog',
-  description: 'A blog theme of VuePress'
+  title: '@vuepress/theme-blog-cuadernito',
+  description: 'A customized blog theme of VuePress'
 }
