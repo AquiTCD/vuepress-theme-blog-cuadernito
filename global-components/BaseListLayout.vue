@@ -46,11 +46,6 @@ export default {
   data() {
     return {
       paginationComponent: null,
-      paginationProps: {
-        props: {
-          'prev-text': 'あああ',
-        },
-      },
     }
   },
 
@@ -60,7 +55,11 @@ export default {
 
   computed: {
     pages() {
-      return this.pagination.pages
+      if (this.$currentTag) {
+        return this.$currentTag.pages
+      } else {
+        return this.pagination.pages
+      }
     },
     currentTagName() {
       if (this.$currentTag) {
@@ -94,6 +93,9 @@ export default {
       const url = post.frontmatter.image || '/ogp_default.png'
       return url
     },
+  },
+  mounted() {
+    console.log(this.$pagination)
   },
 }
 </script>
