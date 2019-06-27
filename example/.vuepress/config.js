@@ -14,7 +14,7 @@ module.exports = {
       'meta',
       {
         name: 'google-site-verification',
-        content: 'JuGe3ADFt8Gx4WMPpxveUrdsqNxw7FsmpNEnWEKqgjo',
+        content: 'xxxxxxxxxxxxxxxxxxxxxxxxxxxx',
       },
     ],
     [
@@ -58,7 +58,7 @@ module.exports = {
     [
       '@vuepress/google-analytics',
       {
-        ga: 'UA-26650812-1',
+        ga: 'UA-xxxxxxxxx-x',
       },
     ],
     [
@@ -170,16 +170,10 @@ module.exports = {
     sidebarDepth: 3,
     relatedPosts: 5,
     recentPosts: 5,
-    amazonAssociateId: "akicks-22",
-    rakutenAffiliateId: "12d74d16.c27dc2b4.12d74d17.2343dd9d",
     nav: [
       { text: 'Home', link: '/' },
       { text: 'About', link: '/about/' },
-      // { text: 'Tags',
-      //   items: [
-      //   // { text: 'css', link: '/tag/css' },
-      //   ]
-      // },
+      { text: 'Tags', link: '/tag/' },
     ],
     popularTags: [
       'Rails',
