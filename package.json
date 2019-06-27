@@ -37,6 +37,8 @@
     "markdown-it-footnote": "^3.0.1",
     "markdown-it-mark": "^2.0.0",
     "markdown-it-task-lists": "^2.1.1",
+    "pug": "^2.0.4",
+    "pug-plain-loader": "^1.0.0",
     "remove-markdown": "^0.3.0",
     "ress": "^1.2.2",
     "vuepress-plugin-autometa": "^0.1.10",
@@ -62,8 +64,6 @@
     "husky": "^2.4.1",
     "lint-staged": "^8.2.1",
     "prettier": "^1.18.2",
-    "pug": "^2.0.4",
-    "pug-plain-loader": "^1.0.0",
     "vue-eslint-parser": "^6.0.4",
     "vuepress": "^1.0.0"
   },
