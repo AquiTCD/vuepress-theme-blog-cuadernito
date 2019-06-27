@@ -35,22 +35,18 @@
 /* global THEME_BLOG_PAGINATION_COMPONENT */
 import Paging from '@theme/components/Paging.vue'
 import Toc from '@theme/components/Toc.vue'
-import {
-  Pagination,
-  SimplePagination,
-} from '@vuepress/plugin-blog/lib/client/components'
+// import {
+//   Pagination,
+//   SimplePagination,
+// } from '@vuepress/plugin-blog/lib/client/components'
 
 export default {
-  components: { Toc, Pagination, Paging },
+  components: { Toc, Paging },
   props: ['pagination'],
   data() {
     return {
       paginationComponent: null,
     }
-  },
-
-  created() {
-    this.paginationComponent = this.getPaginationComponent()
   },
 
   computed: {
@@ -71,17 +67,21 @@ export default {
     },
   },
 
+  // created() {
+  //   this.paginationComponent = this.getPaginationComponent()
+  // },
+
   methods: {
-    getPaginationComponent() {
-      const n = THEME_BLOG_PAGINATION_COMPONENT
-      if (n === 'Pagination') {
-        return Pagination
-      }
-      if (n === 'SimplePagination') {
-        return SimplePagination
-      }
-      return Vue.component(n) || Pagination
-    },
+    // getPaginationComponent() {
+    //   const n = THEME_BLOG_PAGINATION_COMPONENT
+    //   if (n === 'Pagination') {
+    //     return Pagination
+    //   }
+    //   if (n === 'SimplePagination') {
+    //     return SimplePagination
+    //   }
+    //   return Vue.component(n) || Pagination
+    // },
     publishedOn(date) {
       if (date) {
         return date.substr(0, 10)
@@ -93,9 +93,6 @@ export default {
       const url = post.frontmatter.image || '/ogp_default.png'
       return url
     },
-  },
-  mounted() {
-    console.log(this.$pagination)
   },
 }
 </script>
