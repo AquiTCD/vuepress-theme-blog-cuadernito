@@ -755,8 +755,8 @@ function flatten(items, res) {
     font-size: 0.8em
     letter-spacing: 0
     line-height: 1.25
-    // padding: inherit
-    // margin: auto
+    margin: 0
+    padding: 0
   code:not([class]),
   var:not([class]),
   samp:not([class]),
