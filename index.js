@@ -19,6 +19,7 @@ module.exports = (themeConfig, ctx) => {
         path: '/',
         layout: 'IndexPost',
         itemLayout: 'Post',
+        frontmatter: { title: '' },
         itemPermalink: '/:slug',
         pagination: {
           lengthPerPage: 12,
