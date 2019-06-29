@@ -5,7 +5,8 @@
       DropdownLink(v-if="item.type === 'links'" :item="item")
       NavLink(v-else :item="item")
     //- <!-- repo link -->
-    a.feed(href="/rss.xml") RSS feed
+    .nav-item
+      a.feed(href="/rss.xml") RSS feed
     a.repo-link(
       v-if="repoLink"
       :href="repoLink"
