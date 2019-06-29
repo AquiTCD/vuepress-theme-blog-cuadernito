@@ -6,7 +6,7 @@
   )
     Header(:should-show-navbar="shouldShowNavbar" :sidebar-items="sidebarItems" @toggle-sidebar="toggleSidebar")
     .content-wrapper
-      DefaultGlobalLayout.l-main
+      DefaultGlobalLayout.l-main.autopagerize_page_element
     Footer(:should-show-navbar="shouldShowNavbar")
 </template>
 
