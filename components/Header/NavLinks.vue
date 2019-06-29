@@ -6,7 +6,7 @@
       NavLink(v-else :item="item")
     //- <!-- repo link -->
     .nav-item
-      a.feed(href="/rss.xml") RSS feed
+      a.feed(href="/feed.xml") RSS feed
     a.repo-link(
       v-if="repoLink"
       :href="repoLink"
